@@ -1,5 +1,4 @@
 
-# Online Python - IDE, Editor, Compiler, Interpreter
 import random
 class DiceRollGame: #This is the main DiceRollGame class, contains the entitre game
     def __init__(self): #This is the default init function, it sets all my variables
