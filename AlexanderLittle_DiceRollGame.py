@@ -31,8 +31,7 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
            except ValueError as f:
                print ("Number of rounds must be an integer please try again")
            else:
-               break
-           
+               break        
         game.board() #At the end of setup, it calls the board function to display the empty board and continue the game
     
     def board(self): #This is the board function, it displays the board at the begining of the game and after every round, the round order is displayed left to right
@@ -41,8 +40,7 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
         count = 0
         listOfScores.clear()
         for i in range(((len(listOfPlayers)) * numRounds)): #This for loop creates the blank board by appending '-' to the new list, listOfScores for the amount of players * the amount of rounds
-            listOfScores.append("-")
-            
+            listOfScores.append("-")   
         print("***********************Round " + str(round) + "************************") #This block prints out the blank listOfScores once 
         print("~\t", end =" ")
         print("")
@@ -96,5 +94,8 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
         elif(playAgain == "2"): #If 2 is selected, the game ends
             print("Thank you and see you later!")
 
+            
+            
 game = DiceRollGame() #I created a new instance of DiceRollGame
 game.setup() #Then called the setup function to start the game
+
