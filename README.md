@@ -3,6 +3,6 @@ I created a basic dice rolling game where it asks for the amount of players and 
 Press enter to roll for each player.
 
 Fixed Bugs: 
-Only one winner is announed if multiple players end with the same score.
+Only one winner is announced if multiple players end with the same score.
 
 Known Bugs:
