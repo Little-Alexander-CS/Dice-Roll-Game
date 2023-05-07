@@ -66,16 +66,17 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
             i += 1
         game.endGame()
         
-    def diceRoll(self, i): #This is the function that rolls the die, it uses random to generate a number between 1-6 inclusive
+    def diceRoll(self, i):
         count = i
-        for i in range (len(listOfPlayers)): #For every player the loop repeats 
-            input(print(listOfPlayers[i], "Hit enter once you are ready to roll your die! ")) #input for the enter key
-            diceRollOne = random.randint(1, 6) #Two random numbers are generated between 1-6 inclusive
+        for i in range(len(listOfPlayers)):
+            input("Press enter once you are ready to roll your die, " + listOfPlayers[i] + "! ")
+            diceRollOne = random.randint(1, 6)
             diceRollTwo = random.randint(1, 6)
-            listOfScores[count] = (diceRollOne + diceRollTwo) #They are inserted into the scores list at count
-            print(listOfPlayers[i], "rolled a", diceRollOne, "and", diceRollTwo) #Printed out
-            count += numRounds #count is incremented by numRounds
-        print(listOfScores) #The list was printed for testing purposes
+            listOfScores[count] = (diceRollOne + diceRollTwo)
+            print(listOfPlayers[i], "rolled a", diceRollOne, "and", diceRollTwo)
+            count += numRounds
+        # print(listOfScores)
+
     
     def endGame(self): #This is the function that is called when the game ends, it calcuates the winner, congratulates them, and asks if the players would like to play again
         count = 0
