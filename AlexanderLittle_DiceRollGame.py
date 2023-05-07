@@ -99,10 +99,7 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
         if(playAgain == "1"): #If 1 is selected, the game restarts with the same players by calling the board function
             game.board()
         elif(playAgain == "2"): #If 2 is selected, the game ends
-            print("Thank you and see you later!")
-
-            
+            print("Thank you and see you later!")           
             
 game = DiceRollGame() #I created a new instance of DiceRollGame
 game.setup() #Then called the setup function to start the game
-
