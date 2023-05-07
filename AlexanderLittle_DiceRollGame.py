@@ -79,13 +79,20 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
     
     def endGame(self): #This is the function that is called when the game ends, it calcuates the winner, congratulates them, and asks if the players would like to play again
         count = 0
-        totalScore = [] #A new list is created which will store the list of all the final scores
-        for a in range(len(listOfPlayers)): #This for loop appends the final score to the totalScore using the sum function
+        totalScore = []
+        for a in range(len(listOfPlayers)):
             totalScore.append(sum(listOfScores[int(count):int(count + numRounds)]))
-            count += numRounds #count is incremented 
-        print(totalScore) #The totalScore was printed for testing purposes
-        winnerIndex = totalScore.index(max(totalScore)) #The winnerIndex is calculated based on the index function of the maximum value of totalScore
-        print("Congratulations to", listOfPlayers[winnerIndex]) #The winner is congratulated
+            count += numRounds
+        print(totalScore)
+        maxScore = max(totalScore)
+        if totalScore.count(maxScore) > 1:
+            print("There is a tie!")
+            winners = [i for i, score in enumerate(totalScore) if score == maxScore]
+            for i in winners:
+                print("Congratulations to", listOfPlayers[i], "you tied with a score of", maxScore)
+        else:
+            winnerIndex = totalScore.index(maxScore)
+            print("Congratulations to", listOfPlayers[winnerIndex], "you won with a score of", maxScore)
         playAgain = 0
         while (playAgain != "1" and playAgain != "2"): #While the user input is not 1 or 2, the loop repeats
             playAgain = input("Would you like to play another game? [1:Yes 2:No]")
