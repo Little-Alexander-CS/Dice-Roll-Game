@@ -21,7 +21,7 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
                break
            
         for i in range(numPlayers): #For loop which asks the players for their names and puts them into the players list
-            listOfPlayers.append(input("Please enter player " + str(i + 1) + " name:"))
+            listOfPlayers.append(input("Please enter player " + str(i + 1) + " name: "))
         
         while True: #While loop which repeats every time an integer is not entered for the number of rounds
            global numRounds
@@ -69,7 +69,7 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
     def diceRoll(self, i): #This is the function that rolls the die, it uses random to generate a number between 1-6 inclusive
         count = i
         for i in range (len(listOfPlayers)): #For every player the loop repeats 
-            input(print(listOfPlayers[i], "Hit enter once you are ready to roll your die!")) #input for the enter key
+            input(print(listOfPlayers[i], "Hit enter once you are ready to roll your die! ")) #input for the enter key
             diceRollOne = random.randint(1, 6) #Two random numbers are generated between 1-6 inclusive
             diceRollTwo = random.randint(1, 6)
             listOfScores[count] = (diceRollOne + diceRollTwo) #They are inserted into the scores list at count
@@ -95,7 +95,7 @@ class DiceRollGame: #This is the main DiceRollGame class, contains the entitre g
             print("Congratulations to", listOfPlayers[winnerIndex], "you won with a score of", maxScore)
         playAgain = 0
         while (playAgain != "1" and playAgain != "2"): #While the user input is not 1 or 2, the loop repeats
-            playAgain = input("Would you like to play another game? [1:Yes 2:No]")
+            playAgain = input("Would you like to play another game? [1:Yes 2:No] ")
         if(playAgain == "1"): #If 1 is selected, the game restarts with the same players by calling the board function
             game.board()
         elif(playAgain == "2"): #If 2 is selected, the game ends
