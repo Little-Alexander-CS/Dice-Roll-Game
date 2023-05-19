@@ -1,6 +1,6 @@
 # Alexander Little April 2022
 import random
-class DiceRollGame: #This is the main DiceRollGame class, contains the entitre game
+class DiceRollGame: #This is the main DiceRollGame class, contains the entire game
     def __init__(self): #This is the default init function, it sets all my variables
         global round
         global listOfPlayers
